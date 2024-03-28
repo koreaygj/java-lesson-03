@@ -51,22 +51,22 @@ public class SnakeGameWithoutTails {
     private static boolean nextDirection(String keyword) {
         switch (keyword) {
             case "r":
-                if (location.getX() == BOARD_SIZE - 1)
+                if (location.getY() == BOARD_SIZE - 1)
                     return false;
                 location = location.adjust( 0 , 1);
                 break;
             case "l":
-                if (location.getX() == 0)
+                if (location.getY() == 0)
                     return false;
                 location = location.adjust( 0 , -1);
                 break;
             case "u":
-                if (location.getY() == BOARD_SIZE - 1)
+                if (location.getX() == 0)
                     return false;
                 location = location.adjust(-1 ,0);
                 break;
             case "d":
-                if (location.getY() == 0)
+                if (location.getX() == BOARD_SIZE - 1)
                     return false;
                 location = location.adjust(1 , 0);
                 break;
